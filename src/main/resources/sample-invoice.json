@@ -1,0 +1,229 @@
+{
+  "accounts": [
+    {
+      "name": "Tech Solutions Ltd",
+      "city": "San Francisco",
+      "country": "USA",
+      "currencySymbol": "USD",
+      "invoice": {
+        "invoiceItems": [
+          {
+            "serviceCode": "WD001",
+            "serviceName": "Web Development",
+            "description": "Full-stack web application development",
+            "quantity": 40,
+            "amount": 50
+          },
+          {
+            "serviceCode": "MA002",
+            "serviceName": "Mobile App Development",
+            "description": "iOS and Android mobile application",
+            "quantity": 60,
+            "amount": 75
+          },
+          {
+            "serviceCode": "CS003",
+            "serviceName": "Cloud Services Setup",
+            "description": "AWS infrastructure setup and configuration",
+            "quantity": 20,
+            "amount": 100
+          },
+          {
+            "serviceCode": "DB004",
+            "serviceName": "Database Design",
+            "description": "Database schema design and optimization",
+            "quantity": 15,
+            "amount": 80
+          }
+        ],
+        "totalAmount": 9700,
+        "taxAmount": 485,
+        "netAmount": 10185
+      }
+    },
+    {
+      "name": "Global Enterprises Inc",
+      "city": "London",
+      "country": "UK",
+      "currencySymbol": "GBP",
+      "invoice": {
+        "invoiceItems": [
+          {
+            "serviceCode": "CO001",
+            "serviceName": "Consulting Services",
+            "description": "Business strategy and IT consulting",
+            "quantity": 30,
+            "amount": 120
+          },
+          {
+            "serviceCode": "TR002",
+            "serviceName": "Training Sessions",
+            "description": "Corporate training on cloud technologies",
+            "quantity": 10,
+            "amount": 200
+          },
+          {
+            "serviceCode": "SP003",
+            "serviceName": "Support Services",
+            "description": "24/7 technical support and maintenance",
+            "quantity": 50,
+            "amount": 60
+          }
+        ],
+        "totalAmount": 8600,
+        "taxAmount": 430,
+        "netAmount": 9030
+      }
+    },
+    {
+      "name": "Digital Innovations Pvt Ltd",
+      "city": "Mumbai",
+      "country": "India",
+      "currencySymbol": "INR",
+      "invoice": {
+        "invoiceItems": [
+          {
+            "serviceCode": "AI001",
+            "serviceName": "AI/ML Development",
+            "description": "Machine learning model development",
+            "quantity": 80,
+            "amount": 85
+          },
+          {
+            "serviceCode": "DA002",
+            "serviceName": "Data Analytics",
+            "description": "Business intelligence and analytics",
+            "quantity": 45,
+            "amount": 70
+          },
+          {
+            "serviceCode": "AP003",
+            "serviceName": "API Integration",
+            "description": "Third-party API integration services",
+            "quantity": 25,
+            "amount": 90
+          },
+          {
+            "serviceCode": "UI004",
+            "serviceName": "UI/UX Design",
+            "description": "User interface and experience design",
+            "quantity": 35,
+            "amount": 65
+          }
+        ],
+        "totalAmount": 14475,
+        "taxAmount": 723.75,
+        "netAmount": 15198.75
+      }
+    },
+    {
+      "name": "CodeCraft Solutions",
+      "city": "Toronto",
+      "country": "Canada",
+      "currencySymbol": "CAD",
+      "invoice": {
+        "invoiceItems": [
+          {
+            "serviceCode": "QA001",
+            "serviceName": "Quality Assurance",
+            "description": "Software testing and QA services",
+            "quantity": 55,
+            "amount": 55
+          },
+          {
+            "serviceCode": "DV002",
+            "serviceName": "DevOps Services",
+            "description": "CI/CD pipeline setup and management",
+            "quantity": 40,
+            "amount": 95
+          },
+          {
+            "serviceCode": "SC003",
+            "serviceName": "Security Audit",
+            "description": "Application security assessment",
+            "quantity": 20,
+            "amount": 150
+          }
+        ],
+        "totalAmount": 9825,
+        "taxAmount": 491.25,
+        "netAmount": 10316.25
+      }
+    },
+    {
+      "name": "NextGen Systems",
+      "city": "Sydney",
+      "country": "Australia",
+      "currencySymbol": "AUD",
+      "invoice": {
+        "invoiceItems": [
+          {
+            "serviceCode": "BC001",
+            "serviceName": "Blockchain Development",
+            "description": "Smart contract and DApp development",
+            "quantity": 70,
+            "amount": 110
+          },
+          {
+            "serviceCode": "IOT002",
+            "serviceName": "IoT Solutions",
+            "description": "Internet of Things application development",
+            "quantity": 50,
+            "amount": 88
+          },
+          {
+            "serviceCode": "AR003",
+            "serviceName": "AR/VR Development",
+            "description": "Augmented and Virtual Reality solutions",
+            "quantity": 35,
+            "amount": 125
+          },
+          {
+            "serviceCode": "PM004",
+            "serviceName": "Project Management",
+            "description": "Agile project management services",
+            "quantity": 60,
+            "amount": 75
+          }
+        ],
+        "totalAmount": 16575,
+        "taxAmount": 828.75,
+        "netAmount": 17403.75
+      }
+    },
+    {
+      "name": "CloudFirst Technologies",
+      "city": "Berlin",
+      "country": "Germany",
+      "currencySymbol": "EUR",
+      "invoice": {
+        "invoiceItems": [
+          {
+            "serviceCode": "MI001",
+            "serviceName": "Cloud Migration",
+            "description": "Legacy system cloud migration",
+            "quantity": 100,
+            "amount": 95
+          },
+          {
+            "serviceCode": "MS002",
+            "serviceName": "Microservices Architecture",
+            "description": "Microservices design and implementation",
+            "quantity": 75,
+            "amount": 105
+          },
+          {
+            "serviceCode": "KU003",
+            "serviceName": "Kubernetes Setup",
+            "description": "Container orchestration setup",
+            "quantity": 30,
+            "amount": 130
+          }
+        ],
+        "totalAmount": 21275,
+        "taxAmount": 1063.75,
+        "netAmount": 22338.75
+      }
+    }
+  ]
+}
