@@ -1,9 +1,9 @@
-package com.careerit.isapp.appconfig;
+package com.careerit.isapp.auth.dto;
 
 import lombok.Data;
 
 @Data
-public class AuthRequest {
+public class LoginRequest {
     private String username;
     private String password;
 }

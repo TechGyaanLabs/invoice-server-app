@@ -1,4 +1,4 @@
-package com.careerit.isapp.appconfig;
+package com.careerit.isapp.auth.util;
 
 import org.springframework.security.core.context.SecurityContextHolder;
 

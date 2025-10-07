@@ -1,6 +1,7 @@
-package com.careerit.isapp.appconfig;
+package com.careerit.isapp.auth.config;
 
 import com.auth0.jwt.interfaces.DecodedJWT;
+import com.careerit.isapp.auth.util.JwtService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

@@ -1,8 +1,9 @@
-package com.careerit.isapp.api;
-
-import com.auth0.jwt.interfaces.DecodedJWT;
-import com.careerit.isapp.appconfig.AuthRequest;
-import com.careerit.isapp.appconfig.JwtService;
+package com.careerit.isapp.auth.api;
+import com.careerit.isapp.auth.domain.User;
+import com.careerit.isapp.auth.dto.LoginRequest;
+import com.careerit.isapp.auth.dto.SignupRequest;
+import com.careerit.isapp.auth.service.UserDetailsServiceImpl;
+import com.careerit.isapp.auth.util.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -10,10 +11,7 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -28,13 +26,17 @@ public class AuthController {
         @Autowired
         private  AuthenticationManager authenticationManager;
 
+        @Autowired
+        private UserDetailsServiceImpl userDetailsService;
+
         @PostMapping("/register")
-        public ResponseEntity<String> register(){
-            return ResponseEntity.ok("OK");
+        public ResponseEntity<User> register(@RequestBody SignupRequest signupRequest) {
+            User user = userDetailsService.signup(signupRequest);
+            return ResponseEntity.ok(user);
         }
 
         @PostMapping("/login")
-        public ResponseEntity<Map<String,String>> login(@RequestBody AuthRequest authRequest){
+        public ResponseEntity<Map<String,String>> login(@RequestBody LoginRequest authRequest){
 
             try {
                 var authToken = new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword());

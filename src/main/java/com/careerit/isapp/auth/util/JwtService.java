@@ -1,4 +1,4 @@
-package com.careerit.isapp.appconfig;
+package com.careerit.isapp.auth.util;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

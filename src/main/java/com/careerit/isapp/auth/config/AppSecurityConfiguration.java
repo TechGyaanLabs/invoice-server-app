@@ -1,5 +1,6 @@
-package com.careerit.isapp.appconfig;
+package com.careerit.isapp.auth.config;
 
+import com.careerit.isapp.auth.util.JwtService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -54,6 +55,8 @@ public class AppSecurityConfiguration {
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/v1/auth/**","/public/**", "/login", "/css/**")
                         .permitAll()
+                        .requestMatchers("/api/v1/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/api/v1/user/**").hasRole("USER")
                         .anyRequest()
                         .authenticated()
                 );
