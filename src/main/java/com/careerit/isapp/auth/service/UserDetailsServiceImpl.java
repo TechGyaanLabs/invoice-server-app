@@ -34,12 +34,16 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                 .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
         return UserDetailsImpl.build(user);
     }
+
+    public User loadAppUserByUsername(String username) throws UsernameNotFoundException {
+        return userRepository.findByUsername(username)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
+    }
     public User signup(SignupRequest signupRequest) {
         User user = new User();
         user.setUsername(signupRequest.getUsername());
         user.setPassword(bCryptPasswordEncoder.encode(signupRequest.getPassword()));
         user.setEmail(signupRequest.getEmail());
-
         Set<String> strRoles  = signupRequest.getRoles();
         Set<Role> roles = new HashSet<>();
         if(strRoles == null || strRoles.isEmpty()){
